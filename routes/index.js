@@ -26,11 +26,6 @@ const paymentController = require("../controller/order/paymentController");
 const webhooks = require("../controller/order/webhook");
 const orderController = require("../controller/order/order.controller");
 const allOrderController = require("../controller/order/allOrder.controller");
-const addToWishlistController = require("../controller/user/addToWishlistController");
-const viewWishlistController = require("../controller/user/viewWishListController");
-const countWishlistController = require("../controller/user/countWishListController");
-const updateWishlistController = require("../controller/user/updateWishList");
-const deleteWishlistController = require("../controller/user/deleteWishListController");
 
 router.post("/signup", userSignUpController);
 router.post("/signin", userSignInController);
@@ -63,10 +58,6 @@ router.post("/checkout", authToken, paymentController);
 router.post("/webhook", webhooks); // /api/webhook
 router.get("/order-list", authToken, orderController);
 router.get("/all-order", authToken, allOrderController);
-router.post("/add-to-wishlist", authToken, addToWishlistController);
-router.get("/view-wishlist", authToken, viewWishlistController);
-router.get("/countWishlistProduct", authToken, countWishlistController);
-router.post("/update-wishlist-product", authToken, updateWishlistController);
-router.post("/delete-wishlist-product", authToken, deleteWishlistController);
+
 
 module.exports = router;
