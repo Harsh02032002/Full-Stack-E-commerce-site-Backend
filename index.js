@@ -11,7 +11,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://full-stack-e-commerce-site-yzyu.vercel.app",
+      "https://full-stack-e-commerce-site-yzyu-2swn59h7k.vercel.app",
     ],
     credentials: true,
   })
